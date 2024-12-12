@@ -26,8 +26,7 @@
     "tempo_moderate",
     "tempo_fast",
     "speechiness_low",
-    "speechiness_moderate",
-    "speechiness_high"
+    "speechiness_moderate"
   ],
   "columns_dtypes": {
     "acousticness": "float64",
@@ -56,8 +55,7 @@
     "tempo_moderate": "bool",
     "tempo_fast": "bool",
     "speechiness_low": "bool",
-    "speechiness_moderate": "bool",
-    "speechiness_high": "bool"
+    "speechiness_moderate": "bool"
   },
   "standard_scaler_mean": [
     -0.059568759980333764,
@@ -71,8 +69,7 @@
     0.020403123919798687,
     -0.022859174874114076,
     0.0056585911891524855,
-    -0.005658591189152454,
-    0.0
+    -0.005658591189152454
   ],
   "standard_scaler_std": [
     0.9753050393355,
@@ -86,8 +83,7 @@
     1.0037134224081485,
     1.0009973293980887,
     0.9957846862539752,
-    0.9957846862539752,
-    0.0
+    0.9957846862539752
   ],
   "target_col": "label"
 }

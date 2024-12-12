@@ -103,8 +103,8 @@ def process_etl_spotify_data():
         clean_df.drop(columns=['tempo'], inplace=True)
 
         # Speechiness bands
-        speechiness_bands = pd.get_dummies(pd.cut(clean_df['speechiness'], bins=[0, 0.20, 0.66, 1],
-                                            labels=['speechiness_low', 'speechiness_moderate', 'speechiness_high']))
+        speechiness_bands = pd.get_dummies(pd.cut(clean_df['speechiness'], bins=[0, 0.20, 0.66],
+                                            labels=['speechiness_low', 'speechiness_moderate']))
         clean_df = pd.concat([clean_df, speechiness_bands], axis=1)
         clean_df.drop(columns=['speechiness'], inplace=True)
 

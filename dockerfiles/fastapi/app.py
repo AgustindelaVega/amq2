@@ -264,16 +264,14 @@ def predict(
 
     # Speechiness bands
     speechiness_bands = pd.get_dummies(
-        pd.cut(features_df['speechiness'], bins=[0, 0.20, 0.66, 1],
-               labels=['speechiness_low', 'speechiness_moderate', 'speechiness_high'])
+        pd.cut(features_df['speechiness'], bins=[0, 0.20, 0.66],
+               labels=['speechiness_low', 'speechiness_moderate'])
     )
     features_df = pd.concat([features_df, speechiness_bands], axis=1)
     features_df.drop(columns=['speechiness'], inplace=True)
 
     # Reorder DataFrame columns
     features_df = features_df[data_dict["columns_after_processing"]]
-
-    print('procesed', features_df)
 
     # Scale the data using standard scaler
     features_df = (features_df-data_dict["standard_scaler_mean"])/data_dict["standard_scaler_std"]
